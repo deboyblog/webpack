@@ -1,8 +1,18 @@
-# vue-webpack-boilerplate
+# vue-webpack-spa-boilerplate
+> forked from [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack)
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
 > This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+
+## Add
+
+- vuex
+- axios
+- less
+## TODO
+
+- change less to options (sass/scss/stylus/less...)
 
 ## Documentation
 
@@ -15,7 +25,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init deboyblog/webpack-spa my-project
 $ cd my-project
 $ npm install
 $ npm run dev

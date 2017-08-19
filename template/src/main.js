@@ -7,8 +7,18 @@ import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#router}}
 import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/router}}
+{{#vuex}}
+import store from './vuex'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/vuex}}
+{{#axios}}
+import http from './http'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/axios}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+{{#axios}}
+Vue.use(http)
+{{/axios}}
 
 /* eslint-disable no-new */
 new Vue({
@@ -16,6 +26,9 @@ new Vue({
   {{#router}}
   router,
   {{/router}}
+  {{#vuex}}
+  store,
+  {{/vuex}}
   {{#if_eq build "runtime"}}
   render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   {{/if_eq}}
